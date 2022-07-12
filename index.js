@@ -94,7 +94,7 @@ client.on("messageCreate", async (message) => {
     const args = message.content.slice(config.prefix.length).trim().split(" ");
     const command = args.shift()?.toLowerCase();
 
-    if(command == "setup-welcome"){
+    if(command == "welcome"){
 
         const channel = message.guild.channels.cache.get(args[0]) || message.mentions.channels.first();
 
@@ -134,10 +134,10 @@ client.on("guildMemberAdd", async (member) => {
                 ctx.drawImage(background, 0, 0, canvas.width, canvas.height)
 
                 ctx.fillStyle = "#ffffff"
-                ctx.font = "100px Comic Sans MS"
+                ctx.font = "90px Comic Sans MS"
 
-                ctx.fillText("Bienvenid@", 460, 260)
-                ctx.fillText(`${member.user.username}`, 460, 340)
+                ctx.fillText("Bienvenid@", 460, 220)
+                ctx.fillText(`${member.user.username}`, 460, 320)
 
                 ctx.beginPath()
                 ctx.arc(247, 238, 175, 0, Math.PI * 2, true)
